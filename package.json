@@ -1,0 +1,27 @@
+{
+	"name": "mern",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"dependencies": {
+		"esm": "^3.2.25"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.15"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node node.js",
+		"dev": "nodemon node.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/BvChung/MERN-practice.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/BvChung/MERN-practice/issues"
+	},
+	"homepage": "https://github.com/BvChung/MERN-practice#readme"
+}

@@ -13,13 +13,30 @@
 // console.log(dan);
 // hello("brandon");
 
-// console.log("example");
-// console.log(__dirname);
-
-const names = require("../MERN/modules/module.js");
-const arr = require("../MERN/modules/module");
 // require("../MERN/modules/runmodule");
+// const names = require("../MERN/modules/module.js");
+// const arr = require("../MERN/modules/module");
+// console.log(names.john, names.mike);
+// console.log(arr.arr);
 
-console.log(names.john, names.mike);
-console.log(arr.arr);
-console.log("nodemon");
+// const http = require("http");
+// const server = http.createServer((req, res) => {
+// 	if (req.url === "/") {
+// 		res.end("homepage");
+// 	}
+// 	if (req.url === "/about") {
+// 		// Blocking code ex.nested for loop
+// 		for (let i = 0; i < 1000; i++) {
+// 			for (let i = 0; i < 1000; i++) {
+// 				console.log(i, j);
+// 			}
+// 		}
+// 		res.end("homepage");
+// 	}
+// 	res.end("Error page");
+// });
+
+// // listen is asynchronous: listen is setting up the server
+// server.listen(5000, () => {
+// 	console.log("Server listening on port 5000...");
+// });

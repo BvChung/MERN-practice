@@ -1,1 +1,1 @@
-Random textChanged
+First: text

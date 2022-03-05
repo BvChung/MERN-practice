@@ -4,7 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"dependencies": {
-		"esm": "^3.2.25"
+		"esm": "^3.2.25",
+		"express": "^4.17.3"
 	},
 	"devDependencies": {
 		"nodemon": "^2.0.15"
@@ -12,7 +13,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node node.js",
-		"dev": "nodemon node.js"
+		"dev": "nodemon app.js"
 	},
 	"repository": {
 		"type": "git",

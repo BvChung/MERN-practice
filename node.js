@@ -1,42 +1,32 @@
-// to run in node use (node node.js)
-// cd .. to return to parent folder
+const { response } = require("express");
+const http = require("http");
+const { readFileSync } = require("fs");
 
-// __dirname - path to current directory
-// __filename - file name
-// require  - function to use modules
-// module - infor about current module(file)
-// process - infor about env where the program is executed
+// user sends a req to server and a response is sent back
 
-// "type": "module", include this in package.json to convert to es6
-// import { dan } from "./modules/module.js";
-// import { hello } from "../MERN/modules/module.js";
-// console.log(dan);
-// hello("brandon");
+// Use readFileSync to link html to specific urls
+const homePage = readFileSync("./index.html");
 
-// require("../MERN/modules/runmodule");
-// const names = require("../MERN/modules/module.js");
-// const arr = require("../MERN/modules/module");
-// console.log(names.john, names.mike);
-// console.log(arr.arr);
+const server = http.createServer((req, res) => {
+	console.log("hit the server");
+	const url = req.url;
+	if (url === "/") {
+		// status code and header
+		res.writeHead(200, { "content-type": "text/html" });
+		// res.end is important as informs that the response is over
+		res.write(homePage);
+		res.end();
+	} else if (url === "/about") {
+		res.writeHead(200, { "content-type": "text/html" });
+		// res.end is important as informs that the response is over
+		res.write("<h1>about page</h1>");
+		res.end();
+	} else {
+		res.writeHead(404, { "content-type": "text/html" });
+		// res.end is important as informs that the response is over
+		res.write("<h1>Does not exist</h1>");
+		res.end();
+	}
+});
 
-// const http = require("http");
-// const server = http.createServer((req, res) => {
-// 	if (req.url === "/") {
-// 		res.end("homepage");
-// 	}
-// 	if (req.url === "/about") {
-// 		// Blocking code ex.nested for loop
-// 		for (let i = 0; i < 1000; i++) {
-// 			for (let i = 0; i < 1000; i++) {
-// 				console.log(i, j);
-// 			}
-// 		}
-// 		res.end("homepage");
-// 	}
-// 	res.end("Error page");
-// });
-
-// // listen is asynchronous: listen is setting up the server
-// server.listen(5000, () => {
-// 	console.log("Server listening on port 5000...");
-// });
+server.listen(5000);
